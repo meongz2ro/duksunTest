@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PLAVE 2024 BIRTHDAY KIT_EUNHO : 덕순이네</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+    <!-- open graph -->
+    <meta property="og:title" content="PLAVE 2024 BIRTHDAY KIT_EUNHO : 덕순이네">
+    <meta property="og:image" content="#">
+    <meta property="og:url" content="#">
+    <!-- reset -->
+    <link rel="stylesheet" href="./css/reset.css">
+    <!-- font -->
+    <link rel="stylesheet" href="./css/fonts.css">
+    <!-- 공통 style -->
+    <link rel="stylesheet" href="./css/common.css">
+    <!-- 개별 style -->
+    <link rel="stylesheet" href="./css/sub.css">
+    <!-- plugIn js -->
+    <!-- jq -->
+    <script src="./js/sub.js"></script>
+</head>
+
+<body>
+    <!-- ***** header ***** -->
+    <header>
+        <!-- * mobile header * -->
+        <div class="m-h-red-container">
+            <!-- * mobile header icon * -->
+            <div class="m-h-icon-container">
+                <!-- * icon left * -->
+                <div class="m-h-icon-left">
+                    <!-- 토글 -->
+                    <a href="#">
+                        <img src="./images/com/mobileToggle.svg" alt="토글 아이콘">
+                    </a>
+                    <!-- 로고 -->
+                    <a class="logo" href="#">
+                        <img src="./images/com/headerLogo.svg" alt="로고 이미지">
+                    </a>
+                </div>
+                <!-- * icon right * -->
+                <div class="m-h-icon-right">
+                    <!-- 검색 -->
+                    <a href="#">
+                        <img src="./images/com/search.svg" alt="검색 아이콘">
+                    </a>
+                    <!-- 마이 페이지 -->
+                    <a href="#">
+                        <img src="./images/com/mypage.svg" alt="마이 페이지 아이콘">
+                    </a>
+                    <!-- 장바구니 -->
+                    <a href="#">
+                        <img src="./images/com/cart.svg" alt="장바구니 아이콘">
+                    </a>
+                    <!-- 챗봇 -->
+                    <a href="#">
+                        <img src="./images/com/chatbot.svg" alt="챗봇 아이콘">
+                    </a>
+                </div>
+            </div>
+
+
+        </div>
+
+        <!-- * pc header * -->
+        <div class="p-h-container">
+            <div class="red"></div>
+            <div class="beige">
+                <a class="h-logo" href="#">
+                    <img src="./images/com/headerLogoPC.svg" alt="pc로고">
+                </a>
+                <!-- pc header menu -->
+                <div class="p-h-nav-container">
+                    <nav>
+                        <ul>
+                            <li><a href="#">공지</a></li>
+                            <p>|</p>
+                            <li><a href="#">질문</a></li>
+                            <p>|</p>
+                            <li><a href="#">후기</a></li>
+                            <p>|</p>
+                            <li><a href="#">펀딩</a></li>
+                        </ul>
+                    </nav>
+                    <nav>
+                        <ul>
+                            <li><a href="#">로그인</a></li>
+                            <p>|</p>
+                            <li><a href="#">회원가입</a></li>
+                            <p>|</p>
+                            <li><a href="#">마이페이지</a></li>
+                            <p>|</p>
+                            <li><a href="#">장바구니</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="header-design">
+                <img src="./images/com/headerDesign.svg" alt="헤더디자인">
+            </div>
+        </div>
+    </header>
+
+    <!-- ***** main ***** -->
+    <main>
+        <!-- * cart, wishlist, buy * -->
+        <div class="m-m-cart-wish-buy-container">
+            <div class="m-m-cart-wish-buy-wrapper">
+                <!-- 장바구니 -->
+                <div class="cart">
+                    <a href="#">
+                        <img src="./images/sub/addCart.svg" alt="장바구니 추가 아이콘">
+                    </a>
+                </div>
+                <!-- 찜하기 -->
+                <div class="wish">
+                    <a href="#">
+                        <img class="default" src="./images/sub/wish.svg" alt="찜하기 아이콘">
+                        <img class="focus" src="./images/sub/wish(focus).svg" alt="찜하기 아이콘">
+                        <p>찜하기</p>
+                    </a>
+                </div>
+                <!-- 구매하기 -->
+                <div class="buy">
+                    <p>구매하기</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- * product * -->
+        <div class="product-container">
+            <!-- 상품 썸네일 -->
+            <div class="product-img">
+                <div class="product-main-img">
+                    <img id="thumbnail" src="./images/sub/productMain.jpg" alt="상품 메인 썸네일">
+                </div>
+                <div class="product-sub-img">
+                    <a onclick="productThumbnail1()" class="sub" href="#">
+                        <img src="./images/sub/productMain.jpg" alt="상품 서브 썸네일 1">
+                    </a>
+                    <a onclick="productThumbnail2()"  class="sub" href="#">
+                        <img src="./images/sub/productSub.jpg" alt="상품 서브 썸네일 1">
+                    </a>
+                </div>
+            </div>
+            <div class="product-text"></div>
+            <div class="product-keyword"></div>
+            <div class="product-details-text"></div>
+            <!-- <div class="product-details-img">
+                <img src="./images/sub/productDetails1.jpg" alt="기본 노출 상세 이미지">
+            </div> -->
+        </div>
+    </main>
+
+    <!-- ***** footer ***** -->
+    <footer>
+        <!-- * 하단 로고 * -->
+        <a class="f-logo" href="#">
+            <img src="./images/com/footerLogo.svg" alt="하단 로고 아이콘">
+        </a>
+        <div class="c-f-csr-comm-container">
+            <!-- 고객센터 -->
+            <div class="csr">
+                <h6>고객센터</h6>
+                <a href="tel:070-4628-1793">
+                    070-4628-1793
+                </a>
+                <p>
+                    평일: 10:00 ~ 17:30 <br>
+                    점심시간: 12:30 ~ 13:30 <br>
+                    주말 및 공휴일은 휴무 전화상담시 <br>
+                    →채팅상담으로 변경됩니다 <br>
+                </p>
+            </div>
+            <!-- 커뮤니티 -->
+            <div class="comm">
+                <h6>커뮤니티</h6>
+                <div class="f-menu">
+                    <ul>
+                        <a href="#">
+                            <li>공지사항</li>
+                        </a>
+                        <a href="#">
+                            <li>이벤트</li>
+                        </a>
+                        <a href="#">
+                            <li>문의게시판</li>
+                        </a>
+                    </ul>
+                    <ul>
+                        <a href="#">
+                            <li>회원가입</li>
+                        </a>
+                        <a href="#">
+                            <li>로그인</li>
+                        </a>
+                        <a href="#">
+                            <li>마이페이지</li>
+                        </a>
+                        <a href="#">
+                            <li>주문조회</li>
+                        </a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- 회사 정보 -->
+        <div class="company">
+            <p>
+                법인명(상호): (주)블라블라 | 대표자: 덕순이 | 개인정보관리책임자: 우주인
+                사업자등록번호: 789-45-61230 | 통신판매업신고: 제2024-수원팔달-0813호
+                주소: 수원시 팔달구 수원역
+            </p>
+        </div>
+        <!-- 하단 네비 -->
+        <nav class="c-f-nav">
+            <ul>
+                <li><a href="#">이용안내</a></li>
+                <p>|</p>
+                <li><a href="#">개인정보취급방식</a></li>
+                <p>|</p>
+                <li><a href="#">이용약관</a></li>
+            </ul>
+        </nav>
+    </footer>
+</body>
+</html>
