@@ -131,8 +131,8 @@
             </div>
         </div>
 
-        <!-- * product * -->
-        <div class="product-container">
+        <!-- * mobile product * -->
+        <div class="m-product-container">
             <!-- 상품 썸네일 -->
             <div class="product-img">
                 <div class="product-main-img">
@@ -147,7 +147,67 @@
                     </a>
                 </div>
             </div>
-            <div class="product-text"></div>
+
+            <!-- 상품명, 가격, 정보 -->
+            <div class="product-text">
+                <!-- 상품명 -->
+                <h2>
+                    PLAVE 2024 BIRTHDAY KIT_EUNHO
+                </h2>
+                <!-- 할인율, 가격 -->
+                <div class="sale-price-container">
+                    <p class="sale">5%</p>
+                    <div class="price-wrapper">
+                        <p class="salesCost">
+                            <s>25,000원</s>
+                        </p>
+                        <p class="price">
+                            23,750원
+                        </p>
+                    </div>
+                </div>
+                <!-- 정보 -->
+                <div class="information-container">
+                    <div class="information-wrapper-l">
+                        <p class="txt-b">판매가</p>
+                        <p>제조사</p>
+                        <p>사이즈</p>
+                    </div>
+                    <div class="information-wrapper-r">
+                        <p>23,750원</p>
+                        <p>순덕이네</p>
+                        <p>125 x 160 x 42 mm</p>
+                    </div>
+                </div>
+                <!-- 수량 -->
+                <div class="amounts-container">
+                    <p>(최소주문 수량 1개 이상)</p>
+                    <div class="icon-text">
+                        <div class="mark"><p>!</p></div>
+                        <p>수량을 선택해주세요.</p>
+                    </div>
+                    <div class="amounts-main">
+                        <div class="product-name">
+                            <p>PLAVE 2024 BIRTHDAY KIT_EUNHO</p>
+                        </div>
+                        <div class="amounts-btn">
+                            <!-- 수량 버튼들 -->
+                            <input class="amountsCss" type="text" name="amounts" value="1" size="3" readonly> <!-- 기본 수량 1로 설정, 수동 입력 방지 -->
+                            <div class="btnBox">
+                                <input class="plusCss" type="button" value=" ▲ " onclick="add();">
+                                <input class="minusCss" type="button" value=" ▼ " onclick="del();">
+                            </div>
+                            <!-- 가격 정보 -->
+                            <input type="hidden" name="sell_price" value="23750"> <!-- 상품 가격 설정 -->
+                            <!-- 총 금액 표시 -->
+                            <div class="priceCss"><span id="check_price">23,750</span>원</div>
+                        </div>
+                    </div>
+                    <div class="total">
+                        <div>총 상품금액 : <span id="total_price">23,750</span> 원</div>
+                    </div>
+                </div>
+            </div>
             <div class="product-keyword"></div>
             <div class="product-details-text"></div>
             <!-- <div class="product-details-img">

@@ -16,6 +16,8 @@
 
 ## 240821
 * GIT HUB - VS CODE 연동
+* mobile sub - js - 수량 버튼 작동 시 금액 계산 이벤트 구현
+* mobile sub - css - 상품 썸네일 디자인 구현
 
 
 # Duksun 이슈 해결
