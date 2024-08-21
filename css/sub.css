@@ -127,6 +127,7 @@ main {
 .sale {
     font-family: var(--point-font-en-ko);
     font-size: 20px;
+    color: var(--main-color-red);
 }
 .price-wrapper {
     display: flex;
