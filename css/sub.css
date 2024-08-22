@@ -6,7 +6,6 @@ main {
     height: auto;
     margin-top: 100px;
     padding: 20px;
-    background-color: blanchedalmond;
 }
 
 /* cart, wishlist, buy */
@@ -80,6 +79,7 @@ main {
     color: var(--color-white);
 }
 
+
 /* mobile product */
 
 /* product img */
@@ -110,13 +110,14 @@ main {
 .product-text {
     width: 100%;
     height: auto;
-    margin-top: 15px;
+    margin-top: 30px;
 }
 /* 상품명 */
 .product-text > h2 {
     font-family: var(--point-font-en-ko);
-    font-size: 24px;
+    font-size: 26px;
     margin-bottom: 10px;
+    font-weight: normal;
 }
 /* 할인율, 가격 */
 .sale-price-container {

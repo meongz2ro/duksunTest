@@ -5,6 +5,13 @@ function productThumbnail1() {
 function productThumbnail2() {
     document.getElementById("thumbnail").src = "./images/sub/productSub.jpg";
   }
+// 서브 썸네일 클릭 시 메인 썸네일 변경 pc
+function productThumbnail1p() {
+    document.getElementById("thumbnailp").src = "./images/sub/productMain.jpg";
+  }
+function productThumbnail2p() {
+    document.getElementById("thumbnailp").src = "./images/sub/productSub.jpg";
+  }
 
 // 수량 버튼 이벤트
 function add() {
@@ -23,6 +30,25 @@ function del() {
       var check = parseInt(pmp.value) * parseInt(sell_price); 
       document.getElementById("check_price").innerText = check.toLocaleString('ko-KR');
       document.getElementById("total_price").innerText = check.toLocaleString('ko-KR'); 
+  }
+}
+// 수량 버튼 이벤트 pc
+function addp() {
+  var pmpp = document.querySelector('input[name="p_amounts"]');
+  var sell_pricep = document.querySelector('input[name="p_sell_price"]').value;
+  pmpp.value = parseInt(pmpp.value) + 1;
+  var checkp = parseInt(pmpp.value) * parseInt(sell_pricep);
+  document.getElementById("p_check_price").innerText = checkp.toLocaleString('ko-KR');
+  document.getElementById("p_total_price").innerText = checkp.toLocaleString('ko-KR');
+}
+function delp() {
+  var pmpp = document.querySelector('input[name="p_amounts"]');
+  var sell_pricep = document.querySelector('input[name="p_sell_price"]').value;
+  if (pmpp.value > 1) {
+      pmpp.value = parseInt(pmpp.value) - 1; 
+      var checkp = parseInt(pmpp.value) * parseInt(sell_pricep); 
+      document.getElementById("p_check_price").innerText = checkp.toLocaleString('ko-KR');
+      document.getElementById("p_total_price").innerText = checkp.toLocaleString('ko-KR'); 
   }
 }
 
@@ -44,5 +70,18 @@ function toggleImages() {
   } else {
       sumImg.style.display = 'none';
       sumBtn.textContent = '상세정보 펼치기';
+  }
+}
+// 상품 상세 이미지 펼치기/접기 이벤트 pc
+function toggleImagesp() {
+  var sumImgp = document.querySelector('.sumImgp');
+  var sumBtnp = document.querySelector('.sumBtnp');
+  
+  if (sumImgp.style.display === 'none' || sumImgp.style.display === '') {
+      sumImgp.style.display = 'block';
+      sumBtnp.textContent = '상세정보 숨기기';
+  } else {
+      sumImgp.style.display = 'none';
+      sumBtnp.textContent = '상세정보 펼치기';
   }
 }

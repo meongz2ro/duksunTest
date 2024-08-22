@@ -14,15 +14,20 @@
 
 # Duksun 작업 일지
 
+## 240822
+* sub mobile - js - 키워드 버튼 클릭 시 색상 변경 이벤트 구현
+* common - header, footer, side menu popup 완료
+* 
+
 ## 240821
 * GIT HUB - VS CODE 연동
-* mobile sub - js - 수량 버튼 작동 시 금액 계산 이벤트 구현
-* mobile sub - css - 상품 썸네일 디자인 구현
+* sub mobile - js - 수량 버튼 작동 시 금액 계산 이벤트 구현
+* sub mobile - css - 상품 썸네일 디자인 구현
 
 
 # Duksun 이슈 해결
 
-■ __상품 키워드 클릭 시 배경, 텍스트 색상 변경 이벤트 이슈 (mobile sub)__
+■ __상품 키워드 클릭 시 배경, 텍스트 색상 변경 이벤트 이슈 (sub mobile)__
 <br>
 <br>
 &emsp;▶ ___이슈 내용___<br> &emsp;&emsp;'.pk' 클릭 시 '.active'에 설정한 배경, 텍스트 색상으로 변경되는 스크립트를 넣었지만 작동되지 않음.<br>
@@ -31,4 +36,8 @@
 <br>
 <br>
 
-* 웅냥냥
+■ __수량 버튼 작동 시 변경될 수량 이벤트 이슈 (sub pc)__
+<br>
+<br>
+
+■ __상품 메인 썸네일 클릭 시 가변 사이즈 어긋나는 이슈 발생 (sub pc)__
