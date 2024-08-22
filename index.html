@@ -9,7 +9,7 @@
     <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
     <!-- open graph -->
     <meta property="og:title" content="덕순이네">
-    <meta property="og:description" content="'덕순이네'는 만화, 애니메이션, 아이돌 등 다양한 장르의 굿즈를 판매하는 쇼핑몰입니다.">
+    <meta property="og:description" content="'덕순이네'는 다양한 장르의 굿즈를 판매하는 쇼핑몰입니다.">
     <meta property="og:image" content="#">
     <meta property="og:url" content="#">
     <!-- reset -->
@@ -25,6 +25,7 @@
      <!-- 팝업 아이콘 플러그인 -->
      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js" integrity="sha512-cdV6j5t5o24hkSciVrb8Ki6FveC2SgwGfLE31+ZQRHAeSRxYhAQskLkq3dLm8ZcWe1N3vBOEYmmbhzf7NTtFFQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- jq -->
+    <script src="./js/common.js" defer></script>
     <script src="./js/index.js" defer></script>
 </head>
 <body>
@@ -37,9 +38,28 @@
                 <!-- * icon left * -->
                 <div class="m-h-icon-left">
                     <!-- 토글 -->
-                    <a href="#">
+                    <button id="main-toggle">
                         <img src="./images/com/mobileToggle.svg" alt="토글 아이콘">
-                    </a>
+                    </button>
+                    <!-- 토글버튼 클릭 시 실행되는 사이드 메뉴바 -->
+                     <div id="siderBar" class="side-bar">
+                        <div class="side-bar-header">
+                            <button id="side-toggle">
+                                <img src="./images/com/mobileSideToggle.svg" alt="토글 아이콘">
+                            </button>
+                            <img src="./images/com/headerLogo.svg" alt="사이드메뉴바 로고">
+                        </div>
+                        <nav>
+                            <ul>
+                                <li><a href="#">공지<span>></span></a></li>
+                                <li><a href="#">상점<span>></span></a></li>
+                                <li><a href="#">펀딩<span>></span></a></li>
+                                <li><a href="#">질문<span>></span></a></li>
+                                <li><a href="#">후기<span>></span></a></li>
+                                <li><a href="#">마이페이지<span>></span></a></li>
+                            </ul>
+                        </nav>
+                     </div>
                     <!-- 로고 -->
                     <a class="logo" href="#">
                         <img src="./images/com/headerLogo.svg" alt="로고 이미지">
@@ -108,180 +128,486 @@
 
     <!-- ============================== mian ==============================-->
     <main>
-        <div class="m_m_bagie_container">
-            <div class="m_m_logo_container">
-                <a href="#" class="headerLogo">
-                    <img src="./images/main/headerLogo.svg" alt="헤더 로고">
-                </a>
+        <!-- mobile main -->
+         <div class="m_m_contanier">
+            <div class="m_m_bagie_container">
+                <div class="m_m_logo_container">
+                    <a href="#" class="headerLogo">
+                        <img src="./images/main/headerLogoMobile.svg" alt="헤더 로고">
+                    </a>
+                </div>
             </div>
-        </div>
-        <div class="m_m_main_design">
-            <img src="./images/com/headerDesign.svg" alt="헤더디자인">
-        </div>
-        <div class="m_m_banner_container">
-            <div class="m_m_bannerImg_container">
-                <a href="#" class="bannerImg">
-                    <img src="./images/main/bannerImg.png" alt="헤더 로고">
-                </a>
+            <div class="m_m_main_design">
+                <img src="./images/com/headerDesign.svg" alt="헤더디자인">
             </div>
-            <!-- 팝업 아이콘 -->
-            <div class="m_m_popupIcon pI1">
-                <img src="./images/main/popupIcon1.png" alt="둥실둥실 아이콘1">
+            <div class="m_m_banner_container">
+                <div class="m_m_bannerImg_container">
+                    <a href="#" class="bannerImg">
+                        <img src="./images/main/bannerImg.png" alt="헤더 로고">
+                    </a>
+                </div>
+                <!-- 팝업 아이콘 -->
+                <div class="m_m_popupIcon pI1">
+                    <img src="./images/main/popupIcon1.png" alt="둥실둥실 아이콘1">
+                </div>
+                <div class="m_m_popupIcon pI2">
+                    <img src="./images/main/popupIcon2.png" alt="둥실둥실 아이콘2">
+                </div>
+                <div class="m_m_popupIcon pI3">
+                    <img src="./images/main/popupIcon3.png" alt="둥실둥실 아이콘3">
+                </div>
             </div>
-            <div class="m_m_popupIcon pI2">
-                <img src="./images/main/popupIcon2.png" alt="둥실둥실 아이콘2">
-            </div>
-            <div class="m_m_popupIcon pI3">
-                <img src="./images/main/popupIcon3.png" alt="둥실둥실 아이콘3">
-            </div>
-        </div>
-        <div class="m_m_folderIcon_container">
-            <div class="folderImg">
-                <a href="#" class="allFloder">
-                    <img src="./images/main/allFolder.svg" alt="전체폴더아이콘">
-                    <p>전체</p>
-                </a>
-                <a href="#" class="atherFolder">
-                    <img src="./images/main/atherFolder.svg" alt="회색폴더아이콘">
-                    <p>신상</p>
-                </a>
-                <a href="#" class="atherFolder">
-                    <img src="./images/main/atherFolder.svg" alt="회색폴더아이콘">
-                    <p>인기</p>
-                </a>
-                <a href="#" class="atherFolder">
-                    <img src="./images/main/atherFolder.svg" alt="회색폴더아이콘">
-                    <p>장르</p>
-                </a>
-            </div>
-        </div> 
-        <!-- 신상 로고, 신상 리스트 -->
-        <div class="m_m_product_container">
-            <!-- 신상 로고 -->
-            <div class="m_m_product_logo">
-                <img src="./images/main/newLogo.svg" alt="신상 로고">
-            </div>
-            <!-- 신상 리스트 (이미지, 텍스트) -->
-            <div class="m_m_product_list_container">
-                <div class="m_m_product_list">
-                    <a href="#">
-                        <img src="./images/main/image 1.jpg" alt="상품이미지1">
-                        <div class="m_m_product_text">
-                            <h6>(일본내수용)주술회전 피규어 FIGURIZM 고죠 사토루 각성 회옥 옥절 세가 굿즈</h6>
-                            <h2>56,000원</h2>
-                            <div class="sale_price">
-                                <h4>10%</h4>
-                                <p>50,400원</p>
+            <div class="m_m_folderIcon_container">
+                <div class="folderImg">
+                    <a href="#" class="allFloder">
+                        <img src="./images/main/allFolder.svg" alt="전체폴더아이콘">
+                        <p>전체</p>
+                    </a>
+                    <a href="#" class="atherFolder">
+                        <img src="./images/main/atherFolder.svg" alt="회색폴더아이콘">
+                        <p>신상</p>
+                    </a>
+                    <a href="#" class="atherFolder">
+                        <img src="./images/main/atherFolder.svg" alt="회색폴더아이콘">
+                        <p>인기</p>
+                    </a>
+                    <a href="#" class="atherFolder">
+                        <img src="./images/main/atherFolder.svg" alt="회색폴더아이콘">
+                        <p>장르</p>
+                    </a>
+                </div>
+            </div> 
+            <!-- 신상 로고, 신상 리스트 -->
+            <div class="m_m_product_container">
+                <!-- 신상 로고 -->
+                <div class="m_m_product_logo">
+                    <img src="./images/main/newLogo.svg" alt="신상 로고">
+                </div>
+                <!-- 신상 리스트 (이미지, 텍스트) -->
+                <div class="m_m_product_list_container">
+                    <div class="m_m_product_list">
+                        <a href="#">
+                            <img src="./images/main/image 1.jpg" alt="상품이미지1">
+                            <div class="m_m_product_text">
+                                <h6>(일본내수용)주술회전 피규어 FIGURIZM 고죠 사토루 각성 회옥 옥절 세가 굿즈</h6>
+                                <h2>56,000원</h2>
+                                <div class="sale_price">
+                                    <h4>10%</h4>
+                                    <p>50,400원</p>
+                                </div>
                             </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="m_m_product_list">
-                    <a href="#">
-                        <img src="./images/main/image 2.jpg" alt="상품이미지2">
-                        <div class="m_m_product_text">
-                            <h6>(일본내수용)주술회전 피규어 FIGURIZM 이타도리 유지 각성 회옥 옥절 세가 굿즈</h6>
-                            <p class="soldOut">SOLD OUT</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="m_m_product_list">
-                    <a href="#">
-                        <img src="./images/main/image 3.jpg" alt="상품이미지3">
-                        <div class="m_m_product_text">
-                            <h6>(포토카드)플레이브 Plave 아이돌_플레이브 네컷 포토카드</h6>
-                            <p>9,000원</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="m_m_product_list">
-                    <a href="#">
-                        <img src="./images/main/image 4.jpg" alt="상품이미지4">
-                        <div class="m_m_product_text">
-                            <h6>[입고완료] 오자마녀 도레미 아이템 컬렉션 (반다이 애기 공식 굿즈)</h6>
-                            <p>18,000원</p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <!-- 인기 로고, 인기 리스트 -->
-        <div class="m_m_product_container">
-            <!-- 인기 로고 -->
-            <div class="m_m_product_logo">
-                <img src="./images/main/popularLogo.svg" alt="인기 로고">
-            </div>
-            <!-- 인기 리스트 (이미지, 텍스트) -->
-            <div class="m_m_product_list_container">
-                <div class="m_m_product_list">
-                    <a href="#">
-                        <img src="./images/main/image 6.jpg" alt="상품이미지6">
-                        <div class="m_m_product_text">
-                            <h6>[25년 03월 발매] 명탐정 코난 극장판 100만 달러의 펜타그램 행사 한정 공식 캔 뱃지 랜덤 단품</h6>
-                            <h2>6,000원</h2>
-                            <div class="sale_price">
-                                <h4>3%</h4>
-                                <p>5,820원</p>
+                        </a>
+                    </div>
+                    <div class="m_m_product_list">
+                        <a href="#">
+                            <img src="./images/main/image 2.jpg" alt="상품이미지2">
+                            <div class="m_m_product_text">
+                                <h6>(일본내수용)주술회전 피규어 FIGURIZM 이타도리 유지 각성 회옥 옥절 세가 굿즈</h6>
+                                <p class="soldOut">SOLD OUT</p>
                             </div>
-                        </div>
-                    </a> 
+                        </a>
+                    </div>
+                    <div class="m_m_product_list">
+                        <a href="#">
+                            <img src="./images/main/image 3.jpg" alt="상품이미지3">
+                            <div class="m_m_product_text">
+                                <h6>(포토카드)플레이브 Plave 아이돌_플레이브 네컷 포토카드</h6>
+                                <p>9,000원</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="m_m_product_list">
+                        <a href="#">
+                            <img src="./images/main/image 4.jpg" alt="상품이미지4">
+                            <div class="m_m_product_text">
+                                <h6>[입고완료] 오자마녀 도레미 아이템 컬렉션 (반다이 애기 공식 굿즈)</h6>
+                                <p>18,000원</p>
+                            </div>
+                        </a>
+                    </div>
                 </div>
-                <div class="m_m_product_list">
-                    <a href="#">
-                        <img src="./images/main/image 7.jpg" alt="상품이미지7">
-                        <div class="m_m_product_text">
-                            <h6>(카드슬리브) 최애의 아이 부시로드 카드 슬리브 하이 그레이드 - 호시노 아이</h6>
-                            <p class="soldOut">SOLD OUT</p>
-                        </div>
-                    </a>
+            </div>
+            <!-- 인기 로고, 인기 리스트 -->
+            <div class="m_m_product_container">
+                <!-- 인기 로고 -->
+                <div class="m_m_product_logo">
+                    <img src="./images/main/popularLogo.svg" alt="인기 로고">
                 </div>
-                <div class="m_m_product_list">
-                    <a href="#">
-                        <img src="./images/main/image 8.jpg" alt="상품이미지8">
-                        <div class="m_m_product_text">
-                            <h6>(아이돌) 트와이스 공식 솜인형 - 러블리스 25cm 9종 택 1</h6>
-                            <p>18,000원</p>
-                        </div>
-                    </a>
+                <!-- 인기 리스트 (이미지, 텍스트) -->
+                <div class="m_m_product_list_container">
+                    <div class="m_m_product_list">
+                        <a href="#">
+                            <img src="./images/main/image 6.jpg" alt="상품이미지6">
+                            <div class="m_m_product_text">
+                                <h6>[25년 03월 발매] 명탐정 코난 극장판 100만 달러의 펜타그램 행사 한정 공식 캔 뱃지 랜덤 단품</h6>
+                                <h2>6,000원</h2>
+                                <div class="sale_price">
+                                    <h4>3%</h4>
+                                    <p>5,820원</p>
+                                </div>
+                            </div>
+                        </a> 
+                    </div>
+                    <div class="m_m_product_list">
+                        <a href="#">
+                            <img src="./images/main/image 7.jpg" alt="상품이미지7">
+                            <div class="m_m_product_text">
+                                <h6>(카드슬리브) 최애의 아이 부시로드 카드 슬리브 하이 그레이드 - 호시노 아이</h6>
+                                <p class="soldOut">SOLD OUT</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="m_m_product_list">
+                        <a href="#">
+                            <img src="./images/main/image 8.jpg" alt="상품이미지8">
+                            <div class="m_m_product_text">
+                                <h6>(아이돌) 트와이스 공식 솜인형 - 러블리스 25cm 9종 택 1</h6>
+                                <p>18,000원</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="m_m_product_list">
+                        <a href="#">
+                            <img src="./images/main/image 9.jpg" alt="상품이미지9">
+                            <div class="m_m_product_text">
+                                <h6>(단행본)봇치 더 록! 만화 단행본 1 2 3 4 5 6 전권 세트</h6>
+                                <p>26,000원</p>
+                            </div>
+                        </a>
+                    </div>
                 </div>
-                <div class="m_m_product_list">
-                    <a href="#">
-                        <img src="./images/main/image 9.jpg" alt="상품이미지9">
-                        <div class="m_m_product_text">
-                            <h6>(단행본)봇치 더 록! 만화 단행본 1 2 3 4 5 6 전권 세트</h6>
-                            <p>26,000원</p>
-                        </div>
-                    </a>
+            </div>
+            <!-- 장르 로고, 장르 리스트 -->
+            <div class="m_m_product_container">
+                <!-- 장르 로고 -->
+                <div class="m_m_product_logo">
+                    <img src="./images/main/gerneLogo.svg" alt="장르 로고">
+                </div>
+                <!-- 장르 리스트 (이미지, 텍스트) -->
+                <div class="m_m_product_list_container">
+                    <div class="m_m_product_list">
+                        <a href="#">
+                            <img src="./images/main/image10.jpg" alt="상품이미지10">
+                        </a>
+                    </div>
+                    <div class="m_m_product_list">
+                        <a href="#">
+                            <img src="./images/main/image11.jpg" alt="상품이미지11">
+                        </a>
+                    </div>
+                    <div class="m_m_product_list">
+                        <a href="#">
+                            <img src="./images/main/image12.jpg" alt="상품이미지12">
+                        </a>
+                    </div>
+                    <div class="m_m_product_list">
+                        <a href="#">
+                            <img src="./images/main/image13.jpg" alt="상품이미지13">
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
-        <!-- 장르 로고, 장르 리스트 -->
-        <div class="m_m_product_container">
-            <!-- 장르 로고 -->
-            <div class="m_m_product_logo">
-                <img src="./images/main/gerneLogo.svg" alt="장르 로고">
+
+        <!-- pc main -->
+        <div class="p_m_container">
+            <div class="p_m_banner_container">
+                <div class="p_m_bannerImg_container">
+                    <a href="#" class="bannerImg">
+                        <img src="./images/main/bannerImg.png" alt="헤더 로고">
+                    </a>
+                </div>
+                <!-- 팝업 아이콘 -->
+                <div class="p_m_popupIcon pI1">
+                    <img src="./images/main/popupIcon1.png" alt="둥실둥실 아이콘1">
+                </div>
+                <div class="p_m_popupIcon pI2">
+                    <img src="./images/main/popupIcon2.png" alt="둥실둥실 아이콘2">
+                </div>
+                <div class="p_m_popupIcon pI3">
+                    <img src="./images/main/popupIcon3.png" alt="둥실둥실 아이콘3">
+                </div>
             </div>
-            <!-- 장르 리스트 (이미지, 텍스트) -->
-            <div class="m_m_product_list_container">
-                <div class="m_m_product_list">
-                    <a href="#">
-                        <img src="./images/main/image10.jpg" alt="상품이미지10">
+            <div class="p_m_folderIcon_container">
+                <div class="folderImg">
+                    <a href="#" class="allFloder">
+                        <img src="./images/main/allFolder.svg" alt="전체폴더아이콘">
+                        <p>전체</p>
+                    </a>
+                    <a href="#" class="atherFolder">
+                        <img src="./images/main/atherFolder.svg" alt="회색폴더아이콘">
+                        <p>신상</p>
+                    </a>
+                    <a href="#" class="atherFolder">
+                        <img src="./images/main/atherFolder.svg" alt="회색폴더아이콘">
+                        <p>인기</p>
+                    </a>
+                    <a href="#" class="atherFolder">
+                        <img src="./images/main/atherFolder.svg" alt="회색폴더아이콘">
+                        <p>장르</p>
                     </a>
                 </div>
-                <div class="m_m_product_list">
-                    <a href="#">
-                        <img src="./images/main/image11.jpg" alt="상품이미지11">
-                    </a>
+            </div> 
+            <!-- 신상 로고, 신상 리스트 -->
+            <div class="p_m_product_container">
+                <!-- 신상 로고 -->
+                <div class="p_m_product_logo">
+                    <img src="./images/main/pcNewLogo.svg" alt="신상 로고">
                 </div>
-                <div class="m_m_product_list">
-                    <a href="#">
-                        <img src="./images/main/image12.jpg" alt="상품이미지12">
-                    </a>
+                <!-- 더보기 -->
+                <div class="moreList">
+                    <a href="#">더보기 ></a>
                 </div>
-                <div class="m_m_product_list">
-                    <a href="#">
-                        <img src="./images/main/image13.jpg" alt="상품이미지13">
-                    </a>
+                <!-- 신상 리스트 (이미지, 텍스트) -->
+                <div class="p_m_product_list_container">
+                    <div class="p_m_product_list">
+                        <a href="#">
+                            <img src="./images/main/image 1.jpg" alt="상품이미지1">
+                            <div class="p_m_product_text">
+                                <h6>(일본내수용)주술회전 피규어 FIGURIZM 고죠 사토루 각성 회옥 옥절 세가 굿즈</h6>
+                                <h2>56,000원</h2>
+                                <div class="sale_price">
+                                    <h4>10%</h4>
+                                    <p>50,400원</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="p_m_product_list">
+                        <a href="#">
+                            <img src="./images/main/image 2.jpg" alt="상품이미지2">
+                            <div class="p_m_product_text">
+                                <h6>(일본내수용)주술회전 피규어 FIGURIZM 이타도리 유지 각성 회옥 옥절 세가 굿즈</h6>
+                                <p class="soldOut">SOLD OUT</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="p_m_product_list">
+                        <a href="#">
+                            <img src="./images/main/image 3.jpg" alt="상품이미지3">
+                            <div class="p_m_product_text">
+                                <h6>(포토카드)플레이브 Plave 아이돌_플레이브 네컷 포토카드</h6>
+                                <p>9,000원</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="p_m_product_list">
+                        <a href="#">
+                            <img src="./images/main/image 4.jpg" alt="상품이미지4">
+                            <div class="p_m_product_text">
+                                <h6>[입고완료] 오자마녀 도레미 아이템 컬렉션 (반다이 애기 공식 굿즈)</h6>
+                                <p>18,000원</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="p_m_product_list">
+                        <a href="#">
+                            <img src="./images/main/image 6.jpg" alt="상품이미지6">
+                            <div class="p_m_product_text">
+                                <h6>[25년 03월 발매] 명탐정 코난 극장판 100만 달러의 펜타그램 행사 한정 공식 캔 뱃지 랜덤 단품</h6>
+                                <h2>6,000원</h2>
+                                <div class="sale_price">
+                                    <h4>3%</h4>
+                                    <p>5,820원</p>
+                                </div>
+                            </div>
+                        </a> 
+                    </div>
+                    <div class="p_m_product_list">
+                        <a href="#">
+                            <img src="./images/main/image 7.jpg" alt="상품이미지7">
+                            <div class="p_m_product_text">
+                                <h6>(카드슬리브) 최애의 아이 부시로드 카드 슬리브 하이 그레이드 - 호시노 아이</h6>
+                                <p class="soldOut">SOLD OUT</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="p_m_product_list">
+                        <a href="#">
+                            <img src="./images/main/image 8.jpg" alt="상품이미지8">
+                            <div class="p_m_product_text">
+                                <h6>(아이돌) 트와이스 공식 솜인형 - 러블리스 25cm 9종 택 1</h6>
+                                <p>18,000원</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="p_m_product_list">
+                        <a href="#">
+                            <img src="./images/main/image 9.jpg" alt="상품이미지9">
+                            <div class="p_m_product_text">
+                                <h6>(단행본)봇치 더 록! 만화 단행본 1 2 3 4 5 6 전권 세트</h6>
+                                <p>26,000원</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- 인기 로고, 인기 리스트 -->
+            <div class="p_m_product_container">
+                <!-- 인기 로고 -->
+                <div class="p_m_product_logo">
+                    <img src="./images/main/pcPopularLogo.svg" alt="인기 로고">
+                </div>
+                <!-- 더보기 -->
+                <div class="moreList">
+                    <a href="#">더보기 ></a>
+                </div>
+                <!-- 인기 리스트 (이미지, 텍스트) -->
+                <div class="p_m_product_list_container">
+                    <div class="p_m_product_list">
+                        <a href="#">
+                            <img src="./images/main/image 1.jpg" alt="상품이미지1">
+                            <div class="p_m_product_text">
+                                <h6>(일본내수용)주술회전 피규어 FIGURIZM 고죠 사토루 각성 회옥 옥절 세가 굿즈</h6>
+                                <h2>56,000원</h2>
+                                <div class="sale_price">
+                                    <h4>10%</h4>
+                                    <p>50,400원</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="p_m_product_list">
+                        <a href="#">
+                            <img src="./images/main/image 2.jpg" alt="상품이미지2">
+                            <div class="p_m_product_text">
+                                <h6>(일본내수용)주술회전 피규어 FIGURIZM 이타도리 유지 각성 회옥 옥절 세가 굿즈</h6>
+                                <p class="soldOut">SOLD OUT</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="p_m_product_list">
+                        <a href="#">
+                            <img src="./images/main/image 3.jpg" alt="상품이미지3">
+                            <div class="p_m_product_text">
+                                <h6>(포토카드)플레이브 Plave 아이돌_플레이브 네컷 포토카드</h6>
+                                <p>9,000원</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="p_m_product_list">
+                        <a href="#">
+                            <img src="./images/main/image 4.jpg" alt="상품이미지4">
+                            <div class="p_m_product_text">
+                                <h6>[입고완료] 오자마녀 도레미 아이템 컬렉션 (반다이 애기 공식 굿즈)</h6>
+                                <p>18,000원</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="p_m_product_list">
+                        <a href="#">
+                            <img src="./images/main/image 6.jpg" alt="상품이미지6">
+                            <div class="p_m_product_text">
+                                <h6>[25년 03월 발매] 명탐정 코난 극장판 100만 달러의 펜타그램 행사 한정 공식 캔 뱃지 랜덤 단품</h6>
+                                <h2>6,000원</h2>
+                                <div class="sale_price">
+                                    <h4>3%</h4>
+                                    <p>5,820원</p>
+                                </div>
+                            </div>
+                        </a> 
+                    </div>
+                    <div class="p_m_product_list">
+                        <a href="#">
+                            <img src="./images/main/image 7.jpg" alt="상품이미지7">
+                            <div class="p_m_product_text">
+                                <h6>(카드슬리브) 최애의 아이 부시로드 카드 슬리브 하이 그레이드 - 호시노 아이</h6>
+                                <p class="soldOut">SOLD OUT</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="p_m_product_list">
+                        <a href="#">
+                            <img src="./images/main/image 8.jpg" alt="상품이미지8">
+                            <div class="p_m_product_text">
+                                <h6>(아이돌) 트와이스 공식 솜인형 - 러블리스 25cm 9종 택 1</h6>
+                                <p>18,000원</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="p_m_product_list">
+                        <a href="#">
+                            <img src="./images/main/image 9.jpg" alt="상품이미지9">
+                            <div class="p_m_product_text">
+                                <h6>(단행본)봇치 더 록! 만화 단행본 1 2 3 4 5 6 전권 세트</h6>
+                                <p>26,000원</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- 장르 로고, 장르 리스트 -->
+            <div class="p_m_product_container">
+                <!-- 장르 로고 -->
+                <div class="p_m_product_logo">
+                    <img src="./images/main/pcGerneLogo.svg" alt="장르 로고">
+                </div>
+                <!-- 더보기 -->
+                <div class="moreList">
+                    <a href="#">더보기 ></a>
+                </div>
+                <!-- 장르 리스트 (이미지, 텍스트) -->
+                <div class="p_m_product_list_container_gerne">
+                    <div class="p_m_product_list_gerne">
+                        <a href="#">
+                            <img src="./images/main/image10.jpg" alt="상품이미지10">
+                        </a>
+                    </div>
+                    <div class="p_m_product_list_gerne">
+                        <a href="#">
+                            <img src="./images/main/image11.jpg" alt="상품이미지11">
+                        </a>
+                    </div>
+                    <div class="p_m_product_list_gerne">
+                        <a href="#">
+                            <img src="./images/main/image12.jpg" alt="상품이미지12">
+                        </a>
+                    </div>
+                    <div class="p_m_product_list_gerne">
+                        <a href="#">
+                            <img src="./images/main/image13.jpg" alt="상품이미지13">
+                        </a>
+                    </div>
+                    <div class="p_m_product_list_gerne">
+                        <a href="#">
+                            <img src="./images/main/image14.jpg" alt="상품이미지14">
+                        </a>
+                    </div>
+                    <div class="p_m_product_list_gerne">
+                        <a href="#">
+                            <img src="./images/main/image15.jpg" alt="상품이미지15">
+                        </a>
+                    </div>
+                    <div class="p_m_product_list_gerne">
+                        <a href="#">
+                            <img src="./images/main/image16.jpg" alt="상품이미지16">
+                        </a>
+                    </div>
+                    <div class="p_m_product_list_gerne">
+                        <a href="#">
+                            <img src="./images/main/image17.jpg" alt="상품이미지17">
+                        </a>
+                    </div>
+                    <div class="p_m_product_list_gerne">
+                        <a href="#">
+                            <img src="./images/main/image18.jpg" alt="상품이미지18">
+                        </a>
+                    </div>
+                    <div class="p_m_product_list_gerne">
+                        <a href="#">
+                            <img src="./images/main/image19.jpg" alt="상품이미지19">
+                        </a>
+                    </div>
+                    <div class="p_m_product_list_gerne">
+                        <a href="#">
+                            <img src="./images/main/image20.jpg" alt="상품이미지20">
+                        </a>
+                    </div>
+                    <div class="p_m_product_list_gerne">
+                        <a href="#">
+                            <img src="./images/main/image21.jpg" alt="상품이미지21">
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -359,5 +685,20 @@
             </ul>
         </nav>
     </footer>
+
+    <!-- ============================== side popup () ==============================-->
+    <div class="p-sidePopup">
+        <div class="chatBot-box">
+            <a href="#">
+                <img src="./images/com/sidePopupChatBot.svg" alt="사이드팝업 챗봇">
+            </a>
+            <div class="count-badge" id="messageBadge">
+                5
+            </div>
+        </div>
+        <a href="./index.html">
+            <img src="./images/com/sidePopupUpSlide.svg" alt="사이드팝업 맨위로">
+        </a>
+    </div>
 </body> 
 </html>

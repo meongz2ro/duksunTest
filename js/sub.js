@@ -25,3 +25,24 @@ function del() {
       document.getElementById("total_price").innerText = check.toLocaleString('ko-KR'); 
   }
 }
+
+// 상품 키워드 클릭 시 배경 색상 변경 이벤트
+document.querySelectorAll('.pk').forEach(function(element) {
+  element.addEventListener('click', function() {
+      this.classList.toggle('active');
+  });
+});
+
+// 상품 상세 이미지 펼치기/접기 이벤트
+function toggleImages() {
+  var sumImg = document.querySelector('.sumImg');
+  var sumBtn = document.querySelector('.sumBtn');
+  
+  if (sumImg.style.display === 'none' || sumImg.style.display === '') {
+      sumImg.style.display = 'block';
+      sumBtn.textContent = '상세정보 숨기기';
+  } else {
+      sumImg.style.display = 'none';
+      sumBtn.textContent = '상세정보 펼치기';
+  }
+}

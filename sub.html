@@ -21,7 +21,8 @@
     <link rel="stylesheet" href="./css/sub.css">
     <!-- plugIn js -->
     <!-- jq -->
-    <script src="./js/sub.js"></script>
+    <script src="./js/common.js" defer></script>
+    <script src="./js/sub.js" defer></script>
 </head>
 
 <body>
@@ -34,9 +35,28 @@
                 <!-- * icon left * -->
                 <div class="m-h-icon-left">
                     <!-- 토글 -->
-                    <a href="#">
+                    <button id="main-toggle">
                         <img src="./images/com/mobileToggle.svg" alt="토글 아이콘">
-                    </a>
+                    </button>
+                    <!-- 토글버튼 클릭 시 실행되는 사이드 메뉴바 -->
+                     <div id="siderBar" class="side-bar">
+                        <div class="side-bar-header">
+                            <button id="side-toggle">
+                                <img src="./images/com/mobileSideToggle.svg" alt="토글 아이콘">
+                            </button>
+                            <img src="./images/com/headerLogo.svg" alt="사이드메뉴바 로고">
+                        </div>
+                        <nav>
+                            <ul>
+                                <li><a href="#">공지<span>></span></a></li>
+                                <li><a href="#">상점<span>></span></a></li>
+                                <li><a href="#">펀딩<span>></span></a></li>
+                                <li><a href="#">질문<span>></span></a></li>
+                                <li><a href="#">후기<span>></span></a></li>
+                                <li><a href="#">마이페이지<span>></span></a></li>
+                            </ul>
+                        </nav>
+                     </div>
                     <!-- 로고 -->
                     <a class="logo" href="#">
                         <img src="./images/com/headerLogo.svg" alt="로고 이미지">
@@ -62,8 +82,6 @@
                     </a>
                 </div>
             </div>
-
-
         </div>
 
         <!-- * pc header * -->
@@ -208,11 +226,80 @@
                     </div>
                 </div>
             </div>
-            <div class="product-keyword"></div>
-            <div class="product-details-text"></div>
-            <!-- <div class="product-details-img">
+
+            <!-- 상품 키워드 -->
+            <div class="product-keyword">
+                <p class="pk">아이돌</p>
+                <p class="pk">플레이브</p>
+                <p class="pk">한정수량</p>
+                <p class="pk">키트</p>
+                <p class="pk">포토카드</p>
+                <p class="pk">키링</p>
+                <p class="pk">포토북</p>
+                <p class="pk">포스터</p>
+                <p class="pk">콜렉트북</p>
+                <p class="pk">스티커</p>
+                <p class="pk">띠부씰</p>
+                <p class="pk">국내제작</p>
+                <p class="pk">재판없음</p>
+                <p class="pk">하루배송</p>
+            </div>
+
+            <!-- 상품 상세정보 -->
+            <div class="product-details-text">
+                <ul class="details-menu">
+                    <a class="defaultMenu" href="#">
+                        <li>상세정보</li>
+                    </a>
+                    <a class="clickMenu" href="#">
+                        <li>구매평 (524)</li>
+                    </a>
+                    <a class="clickMenu" href="#">
+                        <li>Q&A</li>
+                    </a>
+                </ul>
+                <div class="details-text">
+                    <p>
+                        * 포장 방법은 상세 페이지와 상이할 수 있습니다.
+                    </p>
+                    <p>
+                        * 제품의 오차와 정상 범위에 관한 내용으로,
+                        <br>
+                        NOTICE 탭의 ＜제품 관련 공지＞를 꼭 읽어보신 후 주문 부탁드립니다.
+                    </p>
+                    <p>
+                        * 인쇄 제품은 생산 시기에 따라 색감 차이가 발생할 수 있습니다.
+                        <br>
+                        인쇄는 날씨의 영향을 많이 받아, 인쇄소에서 언제 인쇄하느냐에 따라 조금씩 달라집니다.
+                        <br>
+                        사람마다 느끼는 정도가 다를 수 있어, 전체적인 검수 과정 이후 포장되고 있습니다.
+                        <br>
+                        큰 색 차이가 있는 것들은 검수 과정에서 빠지고 있으나,
+                        <br>
+                        인쇄소에서도 파본으로 인정하지 않고 큰 차이가 보이지 않는다면 파본으로 보고 있지 않습니다.
+                    </p>
+                </div>
+            </div>
+
+            <!-- 상품 상세이미지 -->
+            <div class="product-details-img">
                 <img src="./images/sub/productDetails1.jpg" alt="기본 노출 상세 이미지">
-            </div> -->
+                <!-- 숨김 이미지 -->
+                <div class="sumImg">
+                    <img src="./images/sub/productDetails2.jpg" alt="숨김 상세 이미지 1">
+                    <img src="./images/sub/productDetails3.jpg" alt="숨김 상세 이미지 2">
+                    <img src="./images/sub/productDetails4.jpg" alt="숨김 상세 이미지 3">
+                    <img src="./images/sub/productDetails5.jpg" alt="숨김 상세 이미지 4">
+                    <img src="./images/sub/productDetails6.jpg" alt="숨김 상세 이미지 5">                  
+                </div>
+                <!-- 접기/펼치기 -->
+                <div class="sum">
+                    <!-- 버튼 -->
+                    <div class="sumBtn" onclick="toggleImages();">
+                        상세정보 펼치기
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
 
@@ -287,5 +374,20 @@
             </ul>
         </nav>
     </footer>
+
+    <!-- ***** side popup ***** -->
+    <div class="p-sidePopup">
+        <div class="chatBot-box">
+            <a href="#">
+                <img src="./images/com/sidePopupChatBot.svg" alt="사이드팝업 챗봇">
+            </a>
+            <div class="count-badge" id="messageBadge">
+                5
+            </div>
+        </div>
+        <a href="./index.html">
+            <img src="./images/com/sidePopupUpSlide.svg" alt="사이드팝업 맨위로">
+        </a>
+    </div>
 </body>
 </html>

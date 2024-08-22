@@ -12,7 +12,6 @@ main {
     height: auto;
 }
 
-
 .m_m_logo_container{
     width: 100%;
     height: 100px;
@@ -106,7 +105,7 @@ main {
 .folderImg p {
     justify-content: space -evenly;
     padding: 5px 7px;
-    font-family: var(--base-font-en-ko-500);
+    font-family: var(--point-font-en-ko);
 }
 
 .m_m_product_container {
@@ -142,17 +141,21 @@ main {
     padding-top: 13px;
 }
 
-/* 수정 필요!!! */
-/* p,
-h6,
-h4,
-h2
- {
+.p_m_product_text>p,
+.p_m_product_text>h6,
+.p_m_product_text>h4,
+.p_m_product_text>h2
+{
     padding: 5px 0px 10px;
-} */
+}
+
 
 .m_m_product_text h6 {
-    font-family: var(--base-font-en-ko-700);
+    font-family: var(--point-font-en-ko);
+    margin-bottom: 5px;
+    margin-top: 10px;
+    font-weight: normal;
+    font-size: 20px;
 }
 
 .m_m_product_text h2 {
@@ -180,4 +183,8 @@ h2
 
 .soldOut {
     color: var(--main-color-red);
+}
+
+.p_m_container {
+    display: none;
 }
