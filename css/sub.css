@@ -1,5 +1,11 @@
 @charset "UTF-8";
 
+/* 모바일에서 보이면 안 되는 것 */
+.p-product-container,
+.p-sidePopup {
+    display: none;
+}
+
 /***** main *****/
 main {
     width: 100%;

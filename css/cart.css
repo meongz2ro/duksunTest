@@ -6,12 +6,18 @@
     box-sizing: border-box;
 }
 
+/* 모바일에서 보이면 안 되는 것 */
+.p-sidePopup {
+    display: none;
+}
+
 
 /* ============================== main ==============================*/
 
 main {
     width: 100%;
     padding: 20px; /* padding adjusted with viewport width */
+    font-family: var(--base-font-en-ko-500);
 }
 
 /* ================================ 카테고리 추천 ============================== */
@@ -196,6 +202,7 @@ section.cartList .clist button.Dl {
     padding: 3px 8px;
     font-size: 1.1rem;
     margin: 10px 0;
+    font-family: var(--base-font-en-ko-500);
 }
 
 section.cartList .clist button.Dl:hover {
@@ -486,26 +493,29 @@ section.cartList .cartandpay {
         display: none; /* 버튼 숨기기 */
     }
 
-section.cartList .cartandpay {
-    display: flex;
-    justify-content: space-between;
-    column-gap: 24px;
-    margin-top: 1vh;
-}
+    section.cartList .cartandpay {
+        display: flex;
+        justify-content: space-between;
+        column-gap: 24px;
+        margin-top: 1vh;
+    }
 
-section.cartList .cartandpay .clist {
-    width: 900px;
-}
+    section.cartList .cartandpay .clist {
+        width: 900px;
+    }
 
-section.cartList .cartandpay .price {
-    width: 444px;
-}
-section.cartList .clist .listGoods .gImg {
-    border: 1px solid #000; /* border adjusted to rem */
-    width: 156px; 
-    height: 155px;
-}
+    section.cartList .cartandpay .price {
+        width: 444px;
+    }
+    section.cartList .clist .listGoods .gImg {
+        border: 1px solid #000; /* border adjusted to rem */
+        width: 156px; 
+        height: 155px;
+    }
 
-
+    /* pc 버전에서 보여야 할 것 */
+    .p-sidePopup {
+        display: block;
+    }
 
 }

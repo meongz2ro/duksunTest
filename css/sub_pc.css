@@ -16,7 +16,8 @@
     }
 
     /* PC 상세 보임 */
-    .p-product-container {
+    .p-product-container,
+    .p-sidePopup {
         display: block;
     }
 

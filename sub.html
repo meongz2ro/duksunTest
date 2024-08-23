@@ -4,19 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PLAVE 2024 BIRTHDAY KIT_EUNHO : 덕순이네</title>
+    <title>[플레이브] 은호 2024 BIRTHDAY 생일 키트 : 덕순이네</title>
     <!-- favicon -->
     <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
     <!-- open graph -->
     <meta property="og:title" content="PLAVE 2024 BIRTHDAY KIT_EUNHO : 덕순이네">
-    <meta property="og:image" content="#">
-    <meta property="og:url" content="#">
+    <meta property="og:image" content="https://meongz2ro.github.io/duksunTest/images/sub/productMain.jpg">
+    <meta property="og:url" content="https://meongz2ro.github.io/duksunTest/sub">
     <!-- reset -->
     <link rel="stylesheet" href="./css/reset.css">
     <!-- font -->
     <link rel="stylesheet" href="./css/fonts.css">
     <!-- 공통 style -->
-    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/common_sub.css">
     <!-- 개별 style -->
     <link rel="stylesheet" href="./css/sub.css">
     <link rel="stylesheet" href="./css/sub_pc.css">
@@ -59,7 +59,7 @@
                         </nav>
                      </div>
                     <!-- 로고 -->
-                    <a class="logo" href="#">
+                    <a class="logo" href="./index.html">
                         <img src="./images/com/headerLogo.svg" alt="로고 이미지">
                     </a>
                 </div>
@@ -74,7 +74,7 @@
                         <img src="./images/com/mypage.svg" alt="마이 페이지 아이콘">
                     </a>
                     <!-- 장바구니 -->
-                    <a href="#">
+                    <a href="./cart.html">
                         <img src="./images/com/cart.svg" alt="장바구니 아이콘">
                     </a>
                     <!-- 챗봇 -->
@@ -89,7 +89,7 @@
         <div class="p-h-container">
             <div class="red"></div>
             <div class="beige">
-                <a class="h-logo" href="#">
+                <a class="h-logo" href="./index.html">
                     <img src="./images/com/headerLogoPC.svg" alt="pc로고">
                 </a>
                 <!-- pc header menu -->
@@ -113,13 +113,10 @@
                             <p>|</p>
                             <li><a href="#">마이페이지</a></li>
                             <p>|</p>
-                            <li><a href="#">장바구니</a></li>
+                            <li><a href="./cart.html">장바구니</a></li>
                         </ul>
                     </nav>
                 </div>
-            </div>
-            <div class="header-design">
-                <img src="./images/com/headerDesign.svg" alt="헤더디자인">
             </div>
         </div>
     </header>
@@ -171,7 +168,7 @@
             <div class="product-text">
                 <!-- 상품명 -->
                 <h2>
-                    PLAVE 2024 BIRTHDAY KIT_EUNHO
+                    [플레이브] 은호 2024 BIRTHDAY 생일 키트
                 </h2>
                 <!-- 할인율, 가격 -->
                 <div class="sale-price-container">
@@ -207,7 +204,7 @@
                     </div>
                     <div class="amounts-main">
                         <div class="product-name">
-                            <p>PLAVE 2024 BIRTHDAY KIT_EUNHO</p>
+                            <p>[플레이브] 은호 2024 BIRTHDAY 생일 키트</p>
                         </div>
                         <div class="amounts-btn">
                             <!-- 수량 버튼들 -->
@@ -325,7 +322,7 @@
                 <div class="product-text">
                     <!-- 상품명 -->
                     <h2>
-                        PLAVE 2024 BIRTHDAY KIT_EUNHO
+                        [플레이브] 은호 2024 BIRTHDAY 생일 키트
                     </h2>
                     <!-- 할인율, 가격 -->
                     <div class="sale-price-container">
@@ -361,7 +358,7 @@
                         </div>
                         <div class="amounts-main">
                             <div class="product-name">
-                                <p>PLAVE 2024 BIRTHDAY KIT_EUNHO</p>
+                                <p>[플레이브] 은호 2024 BIRTHDAY 생일 키트</p>
                             </div>
                             <div class="amounts-btn">
                                 <!-- 수량 버튼들 -->
@@ -553,19 +550,95 @@
         </nav>
     </footer>
 
-    <!-- ***** side popup ***** -->
+    <!-- ============================== 사이드 팝업 ==============================-->
     <div class="p-sidePopup">
+        <div class="search-btn">
+            <button id="searchBtn">
+                <img id="searchIcon" src="./images/com/SearchBtn.svg" alt="사이드팝업 검색">
+            </button>
+        </div>
         <div class="chatBot-box">
-            <a href="#">
-                <img src="./images/com/sidePopupChatBot.svg" alt="사이드팝업 챗봇">
-            </a>
+            <button id="chatbotBtn">
+                <img id="chatbotIcon" src="./images/com/sidePopupChatBot.svg" alt="사이드팝업 챗봇">
+            </button>
             <div class="count-badge" id="messageBadge">
                 5
             </div>
         </div>
-        <a href="./sub.html">
-            <img src="./images/com/sidePopupUpSlide.svg" alt="사이드팝업 맨위로">
-        </a>
+        <div class="site-up-slide">
+            <a href="./sub.html">
+                <img src="./images/com/sidePopupUpSlide.svg" alt="사이드팝업 맨위로">
+            </a>
+        </div>
     </div>
+
+    <!--============================== 검색 팝업창 ==============================-->
+    <div id="side-popup-search" class="popup-searchbtn">
+        <div class="popup-search-content">
+            <div class="searh-header-container">
+                <input type="text" placeholder="검색어를 입력하세요">
+                <img src="./images/com/popup-searchBtn.svg" alt="팝업창 검색아이콘">
+            </div>
+            <div class="search-main-container">
+                <div class="searh-history-container">
+                    <h1>최근 검색어</h1>
+                    <p>최근에 검색한 기록이 없습니다</p>
+                </div>
+                <div class="searh-ranking-container">
+                    <h1>실시간 인기 검색어</h1>
+                    <div class="rankimg-list">
+                        <div class="ranking-title">
+                            <h2>1</h2>
+                            <p>PLAVE</p>
+                        </div>
+                        <div class="ranking-title">
+                            <h2>2</h2>
+                            <p>치이카와</p>
+                        </div>
+                        <div class="ranking-title">
+                            <h2>3</h2>
+                            <p>나의 히어로 ...</p>
+                        </div>
+                        <div class="ranking-title">
+                            <h2>4</h2>
+                            <p>원피스</p>
+                        </div>
+                        <div class="ranking-title">
+                            <h2>5</h2>
+                            <p>하츄핑</p>
+                        </div>
+                        <div class="ranking-title">
+                            <h2>6</h2>
+                            <p>BTS</p>
+                        </div>
+                        <div class="ranking-title">
+                            <h2>7</h2>
+                            <p>세븐틴</p>
+                        </div>
+                        <div class="ranking-title">
+                            <h2>8</h2>
+                            <p>명탐정 코난</p>
+                        </div>
+                        <div class="ranking-title">
+                            <h2>9</h2>
+                            <p>뉴진스</p>
+                        </div>
+                        <div class="ranking-title">
+                            <h2>10</h2>
+                            <p>이누야샤</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 챗봇 팝업창 -->
+    <!-- <div id="chatBotPopup" class="chatbot-popup">
+        <div class="popup-chatbot-content">
+            <button id="closeChatBotPopup" class="close-btn">&times;</button>
+            <h2>챗봇 팝업</h2>
+        </div>
+    </div> -->
 </body>
 </html>
