@@ -294,7 +294,6 @@ section.cartList .clist .listGoods .info span {
 section.cartList .clist .listGoods .decision {
     display: flex;
     flex-direction: column;
-    align-items: right;
     row-gap: 14px;
 }
 
