@@ -29,21 +29,24 @@
     .p_m_banner_container {
         position: relative;
         top: 170px;
-        text-align: center;
+        width: calc(100% - 540px);
+        overflow: hidden;
+        margin: 0 auto;
     }
 
     .p_m_bannerImg_container {
-        /* 이미지가 포함된 div를 인라인 블록 요소로 변경하여 text-align이 적용되도록 함 */
-        display: inline-block;
-        padding: 0px 270px;
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+        width: 300%;
     }
-
+    .bannerImg {
+        width: 100%;
+    }
     .p_m_bannerImg_container img {
         width: 100%;
         height: auto;
+        flex-shrink: 0;
         object-fit: cover;
-        display: block; /* 이미지 요소를 블록 요소로 변경하여 상하 마진이 적용되도록 함 */
-        margin: 0 auto;
     }
 
     /* main popup icon */
@@ -52,21 +55,22 @@
     }
 
     .pI1 {
-        top: 50px;
-        left: 70px;
+        top: 15vw;
+        left: 5vw;
     }
     .pI1 img {
         width: 70px;
     }
     .pI2 {
-        top: 170px;
-        right: 90px;
+        top: 23vw;
+        right: 5vw;
     }
     .pI2 img {
         width: 65px;
     }
     .pI3 {
-        left: 350px;
+        top: 40vw;
+        left: 30vw;
     }
     .pI3 img {
         width: 60px;
@@ -223,6 +227,8 @@
     .p_m_product_list_gerne img:hover {
         filter: brightness(30%) contrast(100%) sepia(20%);
     }
-
+    .p-sidePopup {
+        display: block;
+    }
 }
 

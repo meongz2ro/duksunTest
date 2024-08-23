@@ -45,11 +45,21 @@ main {
 .m_m_banner_container {
     position: relative;
     top: 70px;
+    width: 100%;
 }
 
-.m_m_banner_container img {
+.m_m_bannerImg_container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 300%;
+}
+.bannerImg {
+    width: 100%;
+}
+.m_m_bannerImg_container img {
     width: 100%;
     height: auto;
+    flex-shrink: 0;
     object-fit: cover;
 }
 
@@ -74,7 +84,7 @@ main {
     height: auto;   
 }
 .pI3 {
-    bottom: 0px;
+    bottom: 0;
     left: 250px;
 }
 .pI3 img {
@@ -186,5 +196,8 @@ main {
 }
 
 .p_m_container {
+    display: none;
+}
+.p-sidePopup {
     display: none;
 }

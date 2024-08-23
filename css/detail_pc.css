@@ -103,7 +103,7 @@
     }
     .p-wish:hover > img,
     .p-wish:focus > img {
-        content: url('../images/sub/wish\(focus\).svg');
+        content: url('../images/detail/wish\(focus\).svg');
     }
     /* 상품 상세 이미지 */
     /* 접기/펼치기 버튼 */

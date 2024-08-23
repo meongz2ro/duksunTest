@@ -1,16 +1,16 @@
 // 서브 썸네일 클릭 시 메인 썸네일 변경
 function productThumbnail1() {
-    document.getElementById("thumbnail").src = "./images/sub/productMain.jpg";
+    document.getElementById("thumbnail").src = "./images/detail/productMain.jpg";
   }
 function productThumbnail2() {
-    document.getElementById("thumbnail").src = "./images/sub/productSub.jpg";
+    document.getElementById("thumbnail").src = "./images/detail/productSub.jpg";
   }
 // 서브 썸네일 클릭 시 메인 썸네일 변경 pc
 function productThumbnail1p() {
-    document.getElementById("thumbnailp").src = "./images/sub/productMain.jpg";
+    document.getElementById("thumbnailp").src = "./images/detail/productMain.jpg";
   }
 function productThumbnail2p() {
-    document.getElementById("thumbnailp").src = "./images/sub/productSub.jpg";
+    document.getElementById("thumbnailp").src = "./images/detail/productSub.jpg";
   }
 
 // 수량 버튼 이벤트

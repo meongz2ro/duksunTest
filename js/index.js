@@ -33,3 +33,30 @@ window.onscroll = function() {
         logo.style.opacity = '0'; // 스크롤이 위로 올라가면 다시 숨김
     }
 };
+
+
+// 배너 좌우 슬라이딩 모바일
+let currentIndex = 0;
+    const sliderWrapper = document.querySelector('.m_m_bannerImg_container');
+    const totalSlides = document.querySelectorAll('.m_m_bannerImg_container .bannerImg').length;
+
+    function showNextSlide() {
+        currentIndex = (currentIndex + 1) % totalSlides;
+        sliderWrapper.style.transform = `translateX(-${currentIndex * 100 / totalSlides}%)`;
+    }
+
+    // 3초마다 슬라이드 변경
+    setInterval(showNextSlide, 3000);
+
+// 배너 좌우 슬라이딩 pc
+let currentIndexpc = 0;
+    const sliderWrapperpc = document.querySelector('.p_m_bannerImg_container');
+    const totalSlidespc = document.querySelectorAll('.p_m_bannerImg_container .bannerImg').length;
+
+    function showNextSlide() {
+        currentIndexpc = (currentIndexpc + 1) % totalSlidespc;
+        sliderWrapperpc.style.transform = `translateX(-${currentIndexpc * 100 / totalSlidespc}%)`;
+    }
+
+    // 3초마다 슬라이드 변경
+    setInterval(showNextSlide, 3000);
